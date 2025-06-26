@@ -23,26 +23,47 @@ class _Container1State extends State<Container1> {
     return Column(
       children: [
         Container(
+          height: w! / 1.2,
+          width: w! / 1.2,
           decoration: BoxDecoration(
             image: DecorationImage(image: AssetImage(illustration1)),
           ),
         ),
-        SizedBox(),
+        SizedBox(height: 20),
         Column(
           children: [
-            Text('data'),
-            SizedBox(),
-            Text('data'),
-            SizedBox(),
+            Text(
+              'Track your \nExpenses to \nSave Money',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: w! / 10,
+                fontWeight: FontWeight.bold,
+                height: 1.2,
+              ),
+            ),
+            SizedBox(height: 10),
+            Text(
+              'Helps you to organize \nyour income and expenses',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 16, color: Colors.grey.shade500),
+            ),
+            SizedBox(height: 30),
             Column(
               children: [
                 ElevatedButton.icon(
+                  style: ButtonStyle(
+                    backgroundColor: WidgetStateProperty.all(AppColors.primary),
+                  ),
                   onPressed: () {},
                   icon: Icon(Icons.arrow_drop_down_circle),
-                  label: Text('Try a Demo'),
+                  label: Text('Try free Demo', style: TextStyle(fontSize: 16)),
                 ),
-                SizedBox(),
-                Text('data'),
+                SizedBox(height: 20),
+                Text(
+                  '- Web, iOS and Android',
+                  style: TextStyle(fontSize: 16, color: Colors.grey.shade500),
+                ),
+                SizedBox(height: 20),
               ],
             ),
           ],
@@ -52,55 +73,68 @@ class _Container1State extends State<Container1> {
   }
 
   Widget desktopContainer1() {
-    return Row(
-      children: [
-        Expanded(
-          child: Column(
-            children: [
-              Text(
-                'Track your \nExpenses to \nSave Money',
-                style: TextStyle(
-                  fontSize: w! / 20,
-                  fontWeight: FontWeight.bold,
-                  height: 1.2,
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: w! / 10, vertical: 30),
+      child: Row(
+        children: [
+          Expanded(
+            child: Column(
+              children: [
+                Text(
+                  'Track your \nExpenses to \nSave Money',
+                  style: TextStyle(
+                    fontSize: w! / 20,
+                    fontWeight: FontWeight.bold,
+                    height: 1.2,
+                  ),
                 ),
-              ),
-              SizedBox(height: 20),
-              Text(
-                'Helps you to organize your income and expenses',
-                style: TextStyle(fontSize: 16, color: Colors.grey.shade500),
-              ),
-              SizedBox(height: 20),
-              Row(
-                children: [
-                  ElevatedButton.icon(
-                    style: ButtonStyle(
-                      backgroundColor: WidgetStateProperty.all(
-                        AppColors.primary,
+                SizedBox(height: 10),
+                Text(
+                  'Helps you to organize your income and expenses',
+                  style: TextStyle(fontSize: 20, color: Colors.grey.shade500),
+                ),
+                SizedBox(height: 30),
+                Row(
+                  children: [
+                    ElevatedButton.icon(
+                      style: ButtonStyle(
+                        backgroundColor: WidgetStateProperty.all(
+                          AppColors.primary,
+                        ),
+                      ),
+                      onPressed: () {},
+                      icon: Icon(Icons.arrow_drop_down_circle),
+                      label: Text(
+                        'Try free Demo',
+                        style: TextStyle(fontSize: 20),
                       ),
                     ),
-                    onPressed: () {},
-                    icon: Icon(Icons.arrow_drop_down_circle),
-                    label: Text('Try free Demo'),
-                  ),
-                  SizedBox(width: 20),
-                  Text(
-                    '- Web, iOS and Android',
-                    style: TextStyle(fontSize: 16, color: Colors.grey.shade500),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-        Expanded(
-          child: Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(image: AssetImage(illustration1)),
+                    SizedBox(width: 20),
+                    Text(
+                      '- Web, iOS and Android',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.grey.shade500,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
           ),
-        ),
-      ],
+          Expanded(
+            child: Container(
+              height: 530,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(illustration1),
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
