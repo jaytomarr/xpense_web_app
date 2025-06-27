@@ -22,21 +22,24 @@ class _NavBarState extends State<NavBar> {
 
   Widget mobileNavBar() {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 20),
+      margin: EdgeInsets.symmetric(vertical: 14),
       height: 70,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [Icon(Icons.menu), navLogo()],
+        children: [
+          Icon(Icons.menu, color: AppColors.black),
+          navLogo(),
+        ],
       ),
     );
   }
 
   Widget desktopNavBar() {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      margin: EdgeInsets.symmetric(vertical: 14),
       height: 70,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           navLogo(),
           Row(
@@ -79,7 +82,11 @@ class _NavBarState extends State<NavBar> {
         onPressed: () {},
         child: Text(
           text,
-          style: TextStyle(color: Colors.black87, fontSize: 18),
+          style: TextStyle(
+            color: AppColors.black,
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
+          ),
         ),
       ),
     );

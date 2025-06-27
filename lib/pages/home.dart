@@ -18,8 +18,13 @@ class _HomeState extends State<Home> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
+          margin: EdgeInsets.symmetric(horizontal: w! / 9),
           child: Column(
-            children: [NavBar(), SizedBox(height: 100), Container1()],
+            children: [
+              NavBar(),
+              SizedBox(height: w! / 80),
+              Container1(),
+            ],
           ),
         ),
       ),
