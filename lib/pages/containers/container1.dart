@@ -20,89 +20,95 @@ class _Container1State extends State<Container1> {
   }
 
   Widget mobileContainer1() {
-    return Column(
-      children: [
-        Container(
-          height: w! / 1,
-          width: w! / 1,
-          decoration: BoxDecoration(
-            image: DecorationImage(image: AssetImage(illustration1)),
+    return Container(
+      height: 600,
+      margin: EdgeInsets.symmetric(horizontal: w! / 9, vertical: 30),
+      child: Column(
+        children: [
+          Container(
+            height: w! / 1.4,
+            width: w! / 1.4,
+            decoration: BoxDecoration(
+              image: DecorationImage(image: AssetImage(illustration)),
+            ),
           ),
-        ),
-        // SizedBox(height: 10),
-        Column(
-          children: [
-            Text(
-              'Track your \nExpenses to \nSave Money',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: w! / 10,
-                fontWeight: FontWeight.bold,
-                height: 1,
+          SizedBox(height: 20),
+          Column(
+            children: [
+              Text(
+                'Track your \nExpenses to \nSave Money',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: w! / 10,
+                  fontWeight: FontWeight.bold,
+                  height: 1,
+                ),
               ),
-            ),
-            SizedBox(height: 14),
-            Text(
-              'Helps you to organize \nyour income and expenses',
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 16, color: AppColors.light),
-            ),
-            SizedBox(height: 24),
-            Column(
-              children: [
-                Container(
-                  height: 40,
-                  width: 180,
-                  child: ElevatedButton.icon(
-                    style: ButtonStyle(
-                      backgroundColor: WidgetStateProperty.all(
-                        AppColors.primary,
+              SizedBox(height: 10),
+              Text(
+                'Helps you to organize \nyour income and expenses',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 16, color: AppColors.light),
+              ),
+              SizedBox(height: 20),
+              Column(
+                children: [
+                  SizedBox(
+                    height: 40,
+                    width: 180,
+                    child: ElevatedButton.icon(
+                      style: ButtonStyle(
+                        backgroundColor: WidgetStateProperty.all(
+                          AppColors.primary,
+                        ),
+                        shape: WidgetStateProperty.all(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                        ),
                       ),
-                      shape: WidgetStateProperty.all(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(5),
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.arrow_drop_down_rounded,
+                        color: Colors.white,
+                      ),
+                      iconAlignment: IconAlignment.end,
+                      label: Text(
+                        ' Try free Demo',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w400,
                         ),
                       ),
                     ),
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.arrow_drop_down_rounded,
-                      color: Colors.white,
-                    ),
-                    iconAlignment: IconAlignment.end,
-                    label: Text(
-                      ' Try free Demo',
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w400,
-                      ),
+                  ),
+                  SizedBox(height: 10),
+                  Text(
+                    '— Web, iOS and Android',
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: AppColors.light,
+                      fontWeight: FontWeight.w400,
                     ),
                   ),
-                ),
-                SizedBox(height: 14),
-                Text(
-                  '— Web, iOS and Android',
-                  style: TextStyle(
-                    fontSize: 16,
-                    color: AppColors.light,
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
-                SizedBox(height: 20),
-              ],
-            ),
-          ],
-        ),
-      ],
+                  SizedBox(height: 20),
+                ],
+              ),
+            ],
+          ),
+        ],
+      ),
     );
   }
 
   Widget desktopContainer1() {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 30),
+      height: 600,
+      margin: EdgeInsets.symmetric(horizontal: w! / 9, vertical: 30),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(
             child: Column(
@@ -147,7 +153,8 @@ class _Container1State extends State<Container1> {
                         ),
                         onPressed: () {},
                         icon: Icon(
-                          Icons.arrow_drop_down_rounded,
+                          Icons.keyboard_arrow_down_rounded,
+                          size: 28,
                           color: Colors.white,
                         ),
                         iconAlignment: IconAlignment.end,
@@ -180,7 +187,7 @@ class _Container1State extends State<Container1> {
               height: 530,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(illustration1),
+                  image: AssetImage(illustration),
                   fit: BoxFit.contain,
                 ),
               ),

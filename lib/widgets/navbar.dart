@@ -22,7 +22,7 @@ class _NavBarState extends State<NavBar> {
 
   Widget mobileNavBar() {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 14),
+      margin: EdgeInsets.symmetric(horizontal: w! / 9, vertical: 14),
       height: 70,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -36,7 +36,7 @@ class _NavBarState extends State<NavBar> {
 
   Widget desktopNavBar() {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 14),
+      margin: EdgeInsets.symmetric(horizontal: w! / 9, vertical: 14),
       height: 70,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
